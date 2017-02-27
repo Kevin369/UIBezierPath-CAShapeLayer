@@ -9,10 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        drawThreeLine()
+        heardDramp()
         // Do any additional setup after loading the view, typically from a nib.
     }
     ///绘制折线图
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         lineShape.path = linePath.cgPath
         //填充色
         lineShape.fillColor = UIColor.clear.cgColor
-        //把绘制的图放到layer上
+        //把绘制的图放到layer上   
         self.view.layer.addSublayer(lineShape)
     }
     
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
     ///椭圆和圆
     func drawFourLine() {
         //椭圆
-        //        let linePath = UIBezierPath.init(ovalIn: CGRect.init(x: 0, y: 0, width: 260, height: 200))
+//        let linePath = UIBezierPath.init(ovalIn: CGRect.init(x: 0, y: 0, width: 260, height: 200))
         //圆
         let linePath = UIBezierPath.init(ovalIn: CGRect.init(x: 0, y: 0, width: 200, height: 200))
         
@@ -139,7 +139,7 @@ class ViewController: UIViewController {
     
     func drawSixLine() {
         //四个角都是圆角
-        //        let path = UIBezierPath.init(roundedRect: CGRect.init(x: 50, y: 50, width: 200, height: 200), cornerRadius: 25)
+//        let path = UIBezierPath.init(roundedRect: CGRect.init(x: 50, y: 50, width: 200, height: 200), cornerRadius: 25)
         //可设置某个角是圆角
         let path = UIBezierPath.init(roundedRect: CGRect.init(x: 50, y: 50, width: 200, height: 200), byRoundingCorners: UIRectCorner.topLeft, cornerRadii: CGSize.init(width: 50, height: 0))
         
@@ -152,12 +152,30 @@ class ViewController: UIViewController {
         self.view.layer.addSublayer(shapeLayer)
     }
     
+    func heardDramp()  {
+        let imageView = UIImageView.init(frame: CGRect.init(x: 100, y: 100, width: 100, height: 100))
+        imageView.image = UIImage.init(named: "heart")
+        self.view.addSubview(imageView)
+        
+        let baseAnimation = CABasicAnimation.init(keyPath: "transform.scale")
+        baseAnimation.fromValue = NSNumber.init(value: 0.5)
+        baseAnimation.toValue = NSNumber.init(value: 1.5)
+        baseAnimation.duration = 1
+        baseAnimation.repeatCount = MAXFLOAT
+        imageView.layer.add(baseAnimation, forKey: "CQScale")
+        
+        
+        
+        
+    }
+
     
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+
+
 }
 
