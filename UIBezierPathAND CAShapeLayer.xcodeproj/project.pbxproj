@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B71A957E1E64053100FDF47B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B71A957D1E64053100FDF47B /* Main.storyboard */; };
 		B7BCB5E71E61983F00FB5AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BCB5E61E61983F00FB5AA4 /* AppDelegate.swift */; };
 		B7BCB5E91E61983F00FB5AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BCB5E81E61983F00FB5AA4 /* ViewController.swift */; };
 		B7BCB5EE1E61983F00FB5AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BCB5ED1E61983F00FB5AA4 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B71A957D1E64053100FDF47B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B7BCB5E31E61983F00FB5AA4 /* UIBezierPathAND CAShapeLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIBezierPathAND CAShapeLayer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BCB5E61E61983F00FB5AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7BCB5E81E61983F00FB5AA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				B7BCB5E61E61983F00FB5AA4 /* AppDelegate.swift */,
 				B7BCB5E81E61983F00FB5AA4 /* ViewController.swift */,
+				B71A957D1E64053100FDF47B /* Main.storyboard */,
 				B7BCB5ED1E61983F00FB5AA4 /* Assets.xcassets */,
 				B7BCB5EF1E61983F00FB5AA4 /* LaunchScreen.storyboard */,
 				B7BCB5F21E61984000FB5AA4 /* Info.plist */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71A957E1E64053100FDF47B /* Main.storyboard in Resources */,
 				B7BCB5F11E61983F00FB5AA4 /* LaunchScreen.storyboard in Resources */,
 				B7BCB5EE1E61983F00FB5AA4 /* Assets.xcassets in Resources */,
 			);
