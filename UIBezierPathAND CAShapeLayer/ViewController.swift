@@ -9,10 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        darwFirstLine()
+        drawThreeLine()
         // Do any additional setup after loading the view, typically from a nib.
     }
     ///绘制折线图
@@ -29,14 +29,19 @@ class ViewController: UIViewController {
         //设施路径画布
         let lineShape = CAShapeLayer()
         lineShape.frame = CGRect.init(x: 10, y: 10, width: 350, height: 400)
+        //宽度
         lineShape.lineWidth = 2
+        //线条之间点的样式
         lineShape.lineJoin = kCALineJoinMiter
+        //线条结尾的样式
         lineShape.lineCap = kCALineCapSquare
         //路径颜色
         lineShape.strokeColor = UIColor.red.cgColor
+        //获取贝塞尔曲线的路径
         lineShape.path = linePath.cgPath
         //填充色
         lineShape.fillColor = UIColor.clear.cgColor
+        //把绘制的图放到layer上
         self.view.layer.addSublayer(lineShape)
     }
     
@@ -63,7 +68,7 @@ class ViewController: UIViewController {
         lineShape.fillColor = UIColor.clear.cgColor
         self.view.layer.addSublayer(lineShape)
     }
-    
+    ///五角形
     func drawThreeLine(){
         
         //创建路径
@@ -93,7 +98,7 @@ class ViewController: UIViewController {
     ///椭圆和圆
     func drawFourLine() {
         //椭圆
-//        let linePath = UIBezierPath.init(ovalIn: CGRect.init(x: 0, y: 0, width: 260, height: 200))
+        //        let linePath = UIBezierPath.init(ovalIn: CGRect.init(x: 0, y: 0, width: 260, height: 200))
         //圆
         let linePath = UIBezierPath.init(ovalIn: CGRect.init(x: 0, y: 0, width: 200, height: 200))
         
@@ -104,7 +109,7 @@ class ViewController: UIViewController {
         lineShape.path = linePath.cgPath
         lineShape.fillColor = UIColor.clear.cgColor
         self.view.layer.addSublayer(lineShape)
-        
+        //添加动画
         let pathAnimation = CABasicAnimation.init(keyPath: "strokeEnd")
         pathAnimation.duration = 1
         pathAnimation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
@@ -134,7 +139,7 @@ class ViewController: UIViewController {
     
     func drawSixLine() {
         //四个角都是圆角
-//        let path = UIBezierPath.init(roundedRect: CGRect.init(x: 50, y: 50, width: 200, height: 200), cornerRadius: 25)
+        //        let path = UIBezierPath.init(roundedRect: CGRect.init(x: 50, y: 50, width: 200, height: 200), cornerRadius: 25)
         //可设置某个角是圆角
         let path = UIBezierPath.init(roundedRect: CGRect.init(x: 50, y: 50, width: 200, height: 200), byRoundingCorners: UIRectCorner.topLeft, cornerRadii: CGSize.init(width: 50, height: 0))
         
@@ -147,12 +152,12 @@ class ViewController: UIViewController {
         self.view.layer.addSublayer(shapeLayer)
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
